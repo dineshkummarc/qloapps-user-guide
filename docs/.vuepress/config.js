@@ -6,6 +6,14 @@ module.exports = {
   description: description,
   head: [
       ['link', { rel: "icon", type: "image/png", href: "/favicon.ico"}],
+      ['script', {}, `
+        (function() {
+            var script = document.createElement('script');
+            script.innerHTML = 'window.chatbotConfig = { url: "https://ask.qloapps.com:5003/chat", logoUrl: "https://docs.qloapps.com/logo_white.png" };';
+            document.head.appendChild(script);
+        })();
+      `],
+      ['script', { src: 'https://vikastiwari-webkul.github.io/ai-chatbot/chatbot.js', async: true }]
   ],
   themeConfig: {
     logo: '/logo.png',
