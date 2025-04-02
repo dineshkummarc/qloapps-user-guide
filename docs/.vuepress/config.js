@@ -6,6 +6,7 @@ module.exports = {
   description: description,
   head: [
       ['link', { rel: "icon", type: "image/png", href: "/favicon.ico"}],
+      ['script', { type: 'text/javascript', src: 'https://webkul.chatwhizz.com/chat-support/js/wk-chat-support.js', async: true }]
   ],
   themeConfig: {
     logo: '/logo.png',
